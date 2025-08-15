@@ -5,3 +5,4 @@ Router::any("login", "user/login");
 Router::any("logout", "user/logout");
 Router::any("register", "user/register");
 Router::any("lock-screen", "user/lock");
+Router::any("profile", "user/profile");

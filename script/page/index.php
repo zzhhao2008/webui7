@@ -46,7 +46,7 @@ view::header('首页');
                             <div class="d-none d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                                 <i class="mdi mdi-calendar-heart icon-lg me-3 text-primary"></i>
                                 <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Start date</small>
+                                    <small class="mb-1 text-muted">开始日期</small>
                                     <div class="dropdown">
                                         <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
@@ -60,31 +60,31 @@ view::header('首页');
                                 </div>
                             </div>
                             <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                <i class="mdi mdi-currency-usd me-3 icon-lg text-danger"></i>
+                                <i class="mdi mdi-account me-3 icon-lg text-danger"></i>
                                 <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Revenue</small>
-                                    <h5 class="me-2 mb-0">$577545</h5>
+                                    <small class="mb-1 text-muted">学号</small>
+                                    <h5 class="me-2 mb-0">54188</h5>
                                 </div>
                             </div>
                             <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                <i class="mdi mdi-eye me-3 icon-lg text-success"></i>
+                                <i class="mdi mdi-biohazard me-3 icon-lg text-success"></i>
                                 <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Total views</small>
-                                    <h5 class="me-2 mb-0">9833550</h5>
+                                    <small class="mb-1 text-muted">今日量化</small>
+                                    <h5 class="me-2 mb-0 text-red">-200</h5>
                                 </div>
                             </div>
                             <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                                <i class="mdi mdi-download me-3 icon-lg text-warning"></i>
+                                <i class="mdi mdi-bullseye me-3 icon-lg text-warning"></i>
                                 <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Downloads</small>
-                                    <h5 class="me-2 mb-0">2233783</h5>
+                                    <small class="mb-1 text-muted">总量化</small>
+                                    <h5 class="me-2 mb-0 text-red">-4444</h5>
                                 </div>
                             </div>
                             <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                                 <i class="mdi mdi-flag me-3 icon-lg text-danger"></i>
                                 <div class="d-flex flex-column justify-content-around">
-                                    <small class="mb-1 text-muted">Flagged</small>
-                                    <h5 class="me-2 mb-0">3497843</h5>
+                                    <small class="mb-1 text-muted">不知道是啥</small>
+                                    <h5 class="me-2 mb-0 text-green">3497843</h5>
                                 </div>
                             </div>
                         </div>
@@ -191,26 +191,26 @@ view::header('首页');
     </div>
 </div>
 <div class="row">
-    <div class="col-md-7 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <p class="card-title">Cash deposits</p>
-                <p class="mb-4">To start a blog, think of a topic about and first brainstorm party is ways to write details</p>
-                <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
-                <canvas id="cash-deposits-chart"></canvas>
-            </div>
-        </div>
-    </div>
     <div class="col-md-5 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <p class="card-title">Total sales</p>
-                <h1>$ 28835</h1>
-                <h4>Gross sales over the years</h4>
-                <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
+                <p class="card-title">个人总量化</p>
+                <h1 class="text-red">-4444</h1>
+                <h4></h4>
+                <p class="text-muted">你扣的分有点多哦！</p>
                 <div id="total-sales-chart-legend"></div>
             </div>
             <canvas id="total-sales-chart"></canvas>
+        </div>
+    </div>
+    <div class="col-md-7 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">班级量化记录</p>
+                <p class="mb-4">去开始部落格，思考一个主题关于，并且第一次的头脑风暴排队是方法去书写细节。</p>
+                <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3"></div>
+                <canvas id="cash-deposits-chart"></canvas>
+            </div>
         </div>
     </div>
 </div>
@@ -218,83 +218,25 @@ view::header('首页');
     <div class="col-md-12 stretch-card">
         <div class="card">
             <div class="card-body">
-                <p class="card-title">Recent Purchases</p>
+                <p class="card-title">最近记录</p>
                 <div class="table-responsive">
                     <table id="recent-purchases-listing" class="table">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Status report</th>
-                                <th>Office</th>
-                                <th>Price</th>
-                                <th>Date</th>
-                                <th>Gross amount</th>
+                                <th>类型</th>
+                                <th>分数</th>
+                                <th>原因</th>
+                                <th>更多信息</th>
+                                <th>日期</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Jeremy Ortega</td>
-                                <td>Levelled up</td>
-                                <td>Catalinaborough</td>
-                                <td>$790</td>
-                                <td>06 Jan 2018</td>
-                                <td>$2274253</td>
-                            </tr>
-                            <tr>
-                                <td>Alvin Fisher</td>
-                                <td>Ui design completed</td>
-                                <td>East Mayra</td>
-                                <td>$23230</td>
-                                <td>18 Jul 2018</td>
-                                <td>$83127</td>
-                            </tr>
-                            <tr>
-                                <td>Emily Cunningham</td>
-                                <td>support</td>
-                                <td>Makennaton</td>
-                                <td>$939</td>
-                                <td>16 Jul 2018</td>
-                                <td>$29177</td>
-                            </tr>
-                            <tr>
-                                <td>Minnie Farmer</td>
-                                <td>support</td>
-                                <td>Agustinaborough</td>
-                                <td>$30</td>
-                                <td>30 Apr 2018</td>
-                                <td>$44617</td>
-                            </tr>
-                            <tr>
-                                <td>Betty Hunt</td>
-                                <td>Ui design not completed</td>
-                                <td>Lake Sandrafort</td>
-                                <td>$571</td>
-                                <td>25 Jun 2018</td>
-                                <td>$78952</td>
-                            </tr>
-                            <tr>
-                                <td>Myrtie Lambert</td>
-                                <td>Ui design completed</td>
-                                <td>Cassinbury</td>
-                                <td>$36</td>
-                                <td>05 Nov 2018</td>
-                                <td>$36422</td>
-                            </tr>
-                            <tr>
-                                <td>Jacob Kennedy</td>
-                                <td>New project</td>
-                                <td>Cletaborough</td>
-                                <td>$314</td>
-                                <td>12 Jul 2018</td>
-                                <td>$34167</td>
-                            </tr>
-                            <tr>
-                                <td>Ernest Wade</td>
-                                <td>Levelled up</td>
-                                <td>West Fidelmouth</td>
-                                <td>$484</td>
-                                <td>08 Sep 2018</td>
-                                <td>$50862</td>
+                                <td>个人</td>
+                                <td>-100</td>
+                                <td>--</td>
+                                <td>无</td>
+                                <td>Today</td>
                             </tr>
                         </tbody>
                     </table>
@@ -306,3 +248,7 @@ view::header('首页');
 <?php
 view::foot();
 ?>
+<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/data-table.js"></script>
+<script src="assets/js/jquery.dataTables.js"></script>
+<script src="assets/js/dataTables.bootstrap4.js"></script>

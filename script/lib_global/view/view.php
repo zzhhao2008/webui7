@@ -36,10 +36,10 @@ class view
         view::import();
     }
     // 定义一个静态函数，用于生成图标
-    public static function icon($name)
+    public static function icon($name,$other)
     {
         // 返回图标
-        return "<i class='bi bi-$name'></i>";
+        return "<i class='mdi mdi-$name $other'></i>";
     }
     // 定义一个静态函数，用于生成jsMdLt
     public static function jsMdLt($id = "pFace", $text)
