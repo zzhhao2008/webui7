@@ -1,0 +1,54 @@
+:root{
+    --frontcolor: #000;
+    --backcolor: #EFEFEF;
+    --subbackcolor: #fefefe;
+    --activecolor: #FFFF00;
+    --barcolor: #fff;
+    --barfcolor: #333;
+}
+body{
+    color: var(--frontcolor);
+    padding-top: 80px;
+    background:none;
+}
+body::before{
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background: var(--backcolor);
+    background-size:cover;
+}
+.nav-item a:visited,.nav-item a:link,.navbar-brand{
+    color: var(--barfcolor);
+    font-weight: 600;
+}
+.nav-item a:hover,.navbar-brand:hover{
+    color: var(--frontcolor);
+    font-weight: 800;
+    text-shadow: 1px 2px 2px gainsboro;
+    border-bottom: 1px solid pink;
+}
+
+.navtopc{
+    background: var(--barcolor);
+}
+.navmainc{
+    background: var(--backcolor);
+    color:var(--frontcolor);
+}
+.abox,.problembox>div,.problemsubbox>div,pre,.dropdown-menu,.dropdown-menu:hover,.dropdown-item:hover{
+    background: var(--subbackcolor);
+}
+
+.active-item{
+    border-bottom: 2px solid var(--activecolor);
+}
+
+.themed-color{
+    background: var(--subbackcolor);
+    color: var(--frontcolor);
+}

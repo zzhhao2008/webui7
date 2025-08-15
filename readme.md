@@ -17,7 +17,7 @@ WebUI7旨在提供一个更现代化、更易用的前端开发框架，帮助�
 - **Aces**：用于代码编辑器功能，提供语法高亮和代码提示。
 - **Chart.js**：用于生成图表和数据可视化。 
 ## 快速开始
-1. 下载ZSV7。
-2. 解压缩到你的Web服务器目录。
-3. 配置/script/lib/main.PHP
+1. 下载WebUI7。
+2. 解压缩到你的Web服务器(APACHE+PHP)目录。
+3. 配置/script/lib/main.php
 4. 访问你的Web服务器，并开始使用ZSV7。

@@ -1,0 +1,36 @@
+/** Border-bottom */
+
+.master-b-m {
+    border-bottom: 2px solid blueviolet;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.visitor-b-m {
+    border-bottom: 2px solid green;
+    box-shadow: 8px 8px 2px 1px rgba(0, 150, 0, .2);
+}
+
+.my-b-m {
+    border-bottom: 2px solid pink;
+    box-shadow: 8px 8px 2px 1px rgba(150, 0, 0, .2);
+}
+
+.danger-b-m {
+    border-bottom: 2px solid red;
+    box-shadow: 4px 4px 2px 1px rgba(150, 0, 0, .2);
+}
+
+.success-b-m {
+    border-bottom: 2px solid green;
+    box-shadow: 4px 4px 2px 1px rgba(0, 150, 0, .2);
+}
+
+.info-b-m {
+    border-bottom: 2px solid rgba(0, 0, 255, .2);
+    box-shadow: 4px 4px 2px 1px rgba(0, 100, 255, .2);
+}
+
+.warning-b-m {
+    border-bottom: 2px solid orange;
+    box-shadow: 4px 4px 2px 1px rgba(255, 150, 0, .2);
+}
