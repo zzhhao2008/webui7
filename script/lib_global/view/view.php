@@ -19,8 +19,7 @@ class view
         echo "</head>\n";
         // 引入导航文件
         include includeViewer("nav");
-        // 输出容器
-        echo "<div class='container main'>";
+        echo '<div class="main-panel"><div class="content-wrapper">';
     }
     public static function reportnav()
     {
@@ -33,6 +32,7 @@ class view
         echo "</div>";
         // 引入尾部文件
         include includeViewer("foot");
+        echo "</div>";
         view::import();
     }
     // 定义一个静态函数，用于生成图标
@@ -116,6 +116,7 @@ class view
             echo "<script>" . $viewimport['css'] . "</script>";
             $viewimport['css'] = "";
         }
+        echo "</body></html>";
     }
     public static function B404()
     {
@@ -199,99 +200,4 @@ class view
 HTML;
         return $id;
     }
-    public static function newchart($vals)
-    {
-        echo "<canvas id=\"chart-" . ($vals['id'] ? $vals['id'] : "") . "\"></canvas>";
-        echo "<script>showChart(`" . json_encode($vals) . "`)</script>";
-    }
-    public static function chart($vals, $cfg = [])
-    {
-        echo "<canvas id=\"chart-" . ($vals['id'] ? $vals['id'] : "") . "\"></canvas>";
-        echo "<script>allChart(`" . json_encode($vals) . "`)</script>";
-    }
-    public static function table($data, $head = array(), $id = "table", $hcfg = [])
-    {
-        echo "<table class=\"table  table-hover\" id=\"$id\">
-        <thead>
-        <tr>";
-        foreach ($head as $k => $v) {
-            echo "<th class='" . ($hcfg[$k] ?: "") . "'>$v</th>";
-        }
-        echo "</tr></thead>
-        <tbody>";
-        foreach ($data as $line) {
-            echo "<tr>";
-            foreach ($line as $col) {
-                echo "<td>$col</td>";
-            }
-            echo "</tr>";
-        }
-        echo "</tbody></table>";
-    }
-    public static function IDandNameForm($action = "")
-    {
-        echo "
-        <form method=\"post\"", $action ? "action=\"$action\"" : "", ">
-            <div class=\"input-group\">
-                <span class=\"input-group-addon\">", view::icon("code"), "</span>
-                <input type=\"text\" class=\"form-control\" name=\"ID\" placeholder=\"身份证号\">
-            </div><!-- /input-group -->
-            <br>
-            <div class=\"input-group\">
-                <span class=\"input-group-addon\">", view::icon("person"), "</span>
-                <input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"姓名\">
-                <span class=\"input-group-btn\">
-                    <button class=\"btn btn-info\" type=\"submit\">确定</button>
-                </span>
-            </div><!-- /input-group -->
-        </form>";
-    }
-    public static function List_sys($list)
-    {
-        echo "<ul class=\"list-group\">";
-        foreach ($list as $data) {
-            echo '<a href="', $data['link'], '" class="common_list list-group-item">';
-            echo self::icon("clipboard-data-fill");
-            echo '<div class="context">', $data['title'], '
-			</div></a>';
-        }
-        echo "</ul>";
-    }
-    public static function SubjectSco($scos)
-    {
-        echo '
-        <div class="report">
-            <div class="row abox">';
-        foreach ($scos as $v) {
-            $sco = $v['sco'];
-            $name = $v['name'];
-            $full = $v['full'];
-            $p = round($sco / $full * 100);
-            echo "
-            <div class=\"col-sm-6 report-sub-pan\" ", ($p < 60 ? "style='color:red'" : ($p >= 90 ? "style='color:green'" : ($p < 70 ? "style='color:orange'" :
-                ""))),
-            ">
-                <span class=\"subjectname\"><i class=\"bi bi-bookmark-check-fill\"></i>$name</span>
-                <span class=\"subjectsco\"  >$sco/<span class=\"fullsco\">$full</span><span class=\"p\">$p%</span></span>
-            </div>";
-        }
-        echo "
-            </div>
-        </div>";
-    }
-    public static function checkbox($id, $v, $c, $text)
-    {
-        if ($c) {
-            $c = "checked";
-        } else {
-            $c = "";
-        }
-        echo <<<HTML
-<div class="form-check form-switch">
-    <input class="form-check-input" type="checkbox" id="$id" name="$id" value="$v" $c>
-    <label class="form-check-label" for="$id">$text</label>
-</div>
-HTML;
-    }
 }
-
