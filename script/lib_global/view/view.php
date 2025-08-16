@@ -18,12 +18,8 @@ class view
 
         echo "</head>\n";
         // 引入导航文件
-        include includeViewer("nav");
-        echo '<div class="main-panel"><div class="content-wrapper">';
-    }
-    public static function reportnav()
-    {
-        include includeViewer("reportnav");
+        if($nav) include includeViewer("nav");
+        echo '<div class="main-panel full-scroll"><div class="content-wrapper">';
     }
     // 定义一个静态函数，用于生成HTML的尾部
     public static function foot()
@@ -35,8 +31,47 @@ class view
         echo "</div>";
         view::import();
     }
+    public static function import()
+    {
+        global $viewimport;
+        if ($viewimport['messagebox']) {
+            echo "<div class=\"toast-container right-pos\" id='messageboxbox'>" . $viewimport['messagebox'] . "</div>";
+            $viewimport['messagebox'] = "";
+        } else {
+            echo "<div class=\"toast-container right-pos\" id='messageboxbox'></div>";
+        }
+        if ($viewimport['alert']) {
+            echo "<div class=\"top-pos\" id='alertboxbox'>" . $viewimport['alert'] . "</div>";
+            $viewimport['alert'] = "";
+        } else {
+            echo "<div class=\"top-pos\" id='alertboxbox'></div>";
+        }
+        if ($viewimport['js']) {
+            echo "<script>" . $viewimport['js'] . "</script>";
+            $viewimport['js'] = "";
+        }
+        if ($viewimport['css']) {
+            echo "<script>" . $viewimport['css'] . "</script>";
+            $viewimport['css'] = "";
+        }
+        echo "</body></html>";
+    }
+    public static function B404()
+    {
+        include includePage("error/404");
+        view::import();
+        exit;
+    }
+    public static function B403()
+    {
+        include includePage("error/403");
+        view::import();
+        exit;
+    }
+
+    /** TOOLS： */
     // 定义一个静态函数，用于生成图标
-    public static function icon($name,$other)
+    public static function icon($name, $other = "")
     {
         // 返回图标
         return "<i class='mdi mdi-$name $other'></i>";
@@ -92,43 +127,6 @@ class view
         </div>
         </div>
         EOF . $viewimport['messagebox'];
-    }
-    public static function import()
-    {
-        global $viewimport;
-        if ($viewimport['messagebox']) {
-            echo "<div class=\"toast-container right-pos\" id='messageboxbox'>" . $viewimport['messagebox'] . "</div>";
-            $viewimport['messagebox'] = "";
-        } else {
-            echo "<div class=\"toast-container right-pos\" id='messageboxbox'></div>";
-        }
-        if ($viewimport['alert']) {
-            echo "<div class=\"top-pos\" id='alertboxbox'>" . $viewimport['alert'] . "</div>";
-            $viewimport['alert'] = "";
-        } else {
-            echo "<div class=\"top-pos\" id='alertboxbox'></div>";
-        }
-        if ($viewimport['js']) {
-            echo "<script>" . $viewimport['js'] . "</script>";
-            $viewimport['js'] = "";
-        }
-        if ($viewimport['css']) {
-            echo "<script>" . $viewimport['css'] . "</script>";
-            $viewimport['css'] = "";
-        }
-        echo "</body></html>";
-    }
-    public static function B404()
-    {
-        include includePage("error/404");
-        view::import();
-        exit;
-    }
-    public static function B403()
-    {
-        include includePage("error/403");
-        view::import();
-        exit;
     }
     public static function pageCutNav($now, $total, $url)
     {

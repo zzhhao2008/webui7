@@ -19,5 +19,8 @@
 <link rel="stylesheet" href="/static/css/bm.css">
 <link rel="stylesheet" href="/static/css/theme.css">
 <script src="/static/js/view.js"></script>
+
 <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/ace/1.43.1/ace.js"></script>
 <script src="/static/js/ace/aceinit.js"></script>
+<script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/marked/16.0.0/lib/marked.umd.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css" integrity="sha512-BrOPA520KmDMqieeM7XFe6a3u3Sb3F1JBaQnrIAmWg3EYrciJ+Qqe6ZcKCdfPv26rGcgTrJnZ/IdQEct8h3Zhw==" crossorigin="anonymous" referrerpolicy="no-referrer" />

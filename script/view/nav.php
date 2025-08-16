@@ -162,5 +162,18 @@
 					</ul>
 				</div>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#doc" aria-expanded="false" aria-controls="doc">
+					<i class="mdi mdi-file-document-box-outline menu-icon"></i>
+					<span class="menu-title">使用文档</span>
+					<i class="menu-arrow"></i>
+				</a>
+				<div class="collapse" id="doc">
+					<ul class="nav flex-column sub-menu">
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=0"> API列表 </a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=1"> 组件列表/文件树 </a></li>
+					</ul>
+				</div>
+			</li>
 		</ul>
 	</nav>

@@ -23,3 +23,7 @@ Majestic Admin
 2. 解压缩到你的Web服务器(APACHE+PHP)目录。
 3. 配置/script/lib/main.php
 4. 访问你的Web服务器，并开始使用ZSV7。
+
+## 文档
+- [API列表](./documents/apilist.md)
+- [组件列表](./documents/componentlist.md)
