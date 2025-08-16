@@ -25,17 +25,20 @@
 			<!-- 消息 Dropdown -->
 			<li class="nav-item dropdown me-1">
 				<a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
-					<i class="mdi mdi-message-text mx-0"></i>
-					<span class="count"></span>
+					<i class="mdi mdi-bell mx-0"></i>
+					<?= $GLOBALS['activeMB'] ? '<span class="count"></span>' : "" ?>
 				</a>
-				<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
-					<p class="mb-0 font-weight-normal float-left dropdown-header">消息</p>
+				<div class="dropdown-menu dropdown-menu-right navbar-dropdown" id="messageDrop" aria-labelledby="messageDropdown">
+					<p class="mb-0 font-weight-normal float-left dropdown-header">消息通知</p>
 					<?php
 					foreach ($GLOBALS['messages'] as $message) {
 
 					?>
 						<a class="dropdown-item" src="<?php echo $message['url']; ?>">
 							<div class="item-thumbnail">
+								<div class="item-icon bg-success">
+									<i class="mdi mdi-<?php echo $message['icon'] ?: "bell"; ?> mx-0"></i>
+								</div>
 							</div>
 							<div class="item-content flex-grow">
 								<h6 class="ellipsis font-weight-normal">
@@ -47,35 +50,6 @@
 							</div>
 						</a>
 					<?php } ?>
-				</div>
-			</li>
-
-
-			<!-- Notification Dropdown -->
-			<li class="nav-item dropdown me-4">
-				<a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-					<i class="mdi mdi-bell mx-0"></i>
-					<span class="count"></span>
-				</a>
-				<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
-					<p class="mb-0 font-weight-normal float-left dropdown-header">通知</p>
-					<?php
-					foreach ($GLOBALS['notifications'] as $notification) {
-					?>
-					<a class="dropdown-item">
-						<div class="item-thumbnail">
-							<div class="item-icon bg-success">
-								<i class="mdi mdi-<?php echo $notification['icon']; ?> mx-0"></i>
-							</div>
-						</div>
-						<div class="item-content">
-							<h6 class="font-weight-normal"><?php echo $notification['title']; ?></h6>
-							<p class="font-weight-light small-text mb-0 text-muted">
-								<?php echo $notification['content']; ?>
-							</p>
-						</div>
-					</a>
-					<?php }?>
 				</div>
 			</li>
 
@@ -177,3 +151,6 @@
 			</li>
 		</ul>
 	</nav>
+	<?php
+	$GLOBALS['navviewed'] = 1;
+	?>

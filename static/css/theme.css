@@ -41,3 +41,6 @@ body::before {
     background: var(--subbackcolor);
     color: var(--frontcolor);
 }
+:root{
+    list-style:none;
+}

@@ -1,6 +1,6 @@
 <?php
 Router::any("/", "index");
-Router::any("index.aspx", "index");
+Router::any("index", "index");
 Router::any("login", "user/login");
 Router::any("logout", "user/logout");
 Router::any("register", "user/register");

@@ -8,6 +8,11 @@ class Router{
         $qp=stripos($uri,"?")-1;
         if($qp<=0) $qp=strlen($uri)-1;
         $uri=substr($uri,1,$qp);
+        $uri=str_replace("//","/",$uri);
+        $uri=str_replace("\\","/",$uri);
+        $uri=trim($uri);
+        $uri=str_replace("..","",$uri);
+        $uri=str_replace([".aspx",".php",".html",".md",".htm",".js",".css"],"",$uri);
         return $o?$_SERVER['REQUEST_URI']:$uri;
     }
     static public function login($uri,$scp){

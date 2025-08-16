@@ -18,17 +18,17 @@ class view
 
         echo "</head>\n";
         // 引入导航文件
-        if($nav) include includeViewer("nav");
+        if ($nav) include includeViewer("nav");
         echo '<div class="main-panel full-scroll"><div class="content-wrapper">';
     }
     // 定义一个静态函数，用于生成HTML的尾部
     public static function foot()
     {
         // 输出容器结束
-        echo "</div>";
+        echo "\n</div>\n";
         // 引入尾部文件
         include includeViewer("foot");
-        echo "</div>";
+        echo "\n</div>\n";
         view::import();
     }
     public static function import()
@@ -47,14 +47,14 @@ class view
             echo "<div class=\"top-pos\" id='alertboxbox'></div>";
         }
         if ($viewimport['js']) {
-            echo "<script>" . $viewimport['js'] . "</script>";
+            echo "\n<script>\n" . $viewimport['js'] . "\n</script>\n";
             $viewimport['js'] = "";
         }
         if ($viewimport['css']) {
-            echo "<script>" . $viewimport['css'] . "</script>";
+            echo "\n<style>\n" . $viewimport['css'] . "\n</style>\n";
             $viewimport['css'] = "";
         }
-        echo "</body></html>";
+        echo "\n</body>\n</html>";
     }
     public static function B404()
     {
@@ -108,25 +108,6 @@ class view
             "<script>setTimeout(function(){document.getElementById('$id').remove();},$currenttime);</script></div>"
             . $viewimport['alert'];
         return $text;
-    }
-    public static function message($text, $title = '消息', $icon = "bell", $time = "刚刚")
-    {
-        global $viewimport;
-        $icon = view::icon($icon);
-        $id = "message" . time() . rand(1000, 9999) . rand(1000, 9999);
-        $viewimport['messagebox'] =  <<<EOF
-        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" id="$id">
-            <div class="toast-header">
-            $icon
-            <strong class="me-auto">$title</strong>
-            <small class="text-muted">$time</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            $text
-        </div>
-        </div>
-        EOF . $viewimport['messagebox'];
     }
     public static function pageCutNav($now, $total, $url)
     {
@@ -197,5 +178,45 @@ class view
         </script>
 HTML;
         return $id;
+    }
+    public static function message($text, $title = '消息', $icon = "bell", $time = "刚刚")
+    {
+        global $viewimport;
+        $icon = view::icon($icon);
+        $id = "message" . time() . rand(1000, 9999) . rand(1000, 9999);
+        $viewimport['messagebox'] =  <<<EOF
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" id="$id">
+            <div class="toast-header">
+            $icon
+            <strong class="me-auto">$title</strong>
+            <small class="text-muted">$time</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            $text
+        </div>
+        </div>
+        EOF . $viewimport['messagebox'];
+    }
+    public static function addMessage($text, $title = '消息', $icon = "bell", $url = "", $show = 0, $time = "刚刚")
+    {
+        if ($show) self::message($text, $title, $icon, $time);
+        global $viewimport;
+        $text = str_replace("'", "\\'", $text);
+        $title = str_replace("'", "\\'", $title);
+        $url = str_replace("'", "\\'", $url);
+        $viewimport['js'] .= "addMessage(`$title`,`$text` ,`$icon`, `$url`);\n";
+    }
+    public static function activeMB()
+    {
+        $GLOBALS['activeMB'] = 1;
+        global $viewimport;
+        $viewimport['js'] .= "activeMB();\n";
+    }
+    public static function deactiveMB()
+    {
+        $GLOBALS['activeMB'] = 0;
+        global $viewimport;
+        $viewimport['js'] .= "deactiveMB();\n";
     }
 }

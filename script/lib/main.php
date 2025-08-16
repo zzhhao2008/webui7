@@ -19,12 +19,6 @@ $GLOBALS["messages"]=array(
         "url" => "/",
         "title" => "欢迎使用ZSV WebUI7.0",
         "content" => "欢迎使用ZSV WebUI7.0",
-    ]
-);
-$GLOBALS["notifications"]=array(
-    [
-        "icon" => "check",
-        "title" => "欢迎使用ZSV WebUI7.0",
-        "content" => "欢迎使用ZSV WebUI7.0",
+        "icon" => "home"
     ]
 );
