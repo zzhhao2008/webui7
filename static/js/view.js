@@ -41,8 +41,8 @@ function deactiveMB() {
 }
 $.extend(true, $.fn.dataTable.defaults, {
     "aLengthMenu": [
-        [5, 10, 15, -1],
-        [5, 10, 15, "全部"]
+        [5, 10, 15, 50, -1],
+        [5, 10, 15, 50, "全部"]
     ],
     "iDisplayLength": 10,
     "language": {

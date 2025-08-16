@@ -220,6 +220,7 @@ view::header('首页', 1);
             <div class="card-body">
                 <p class="card-title">最近记录</p>
                 <div class="table-responsive">
+                    <?php tables::JQDataTable("recent-purchases-listing")?>
                     <table id="recent-purchases-listing" class="table">
                         <thead>
                             <tr>

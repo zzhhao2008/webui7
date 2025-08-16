@@ -231,9 +231,5 @@
       document.getElementById('total-sales-chart-legend').innerHTML = totalSalesChart.generateLegend();
     }
 
-    $('#recent-purchases-listing').DataTable({
-      searching: true, paging: true, info: true
-    });
-
   });
 })(jQuery);
