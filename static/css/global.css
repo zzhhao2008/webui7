@@ -1,17 +1,3 @@
-img {
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.item img {
-    max-height: 399px;
-    margin: 0 auto;
-}
-
-.item {
-    background: rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
 
 .xq {
     display: none;
