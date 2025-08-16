@@ -1,5 +1,5 @@
 <?php
-view::header("404-出错了！");
+view::header("404-出错了！",2);
 ?>
 <div class="row">
     <div class="col-md-12 stretch-card">

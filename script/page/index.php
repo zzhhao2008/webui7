@@ -1,5 +1,5 @@
 <?php
-view::header('首页');
+view::header('首页',1);
 ?>
 <div class="row">
     <div class="col-md-12 grid-margin">

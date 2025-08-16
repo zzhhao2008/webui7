@@ -4,14 +4,14 @@
 <meta content="ZSV Webui7,ZSV Studio,淄博实验中学,淄博实验中学电子科创社" name="keywords">
 
 <!-- plugins:css -->
-<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="assets/vendors/base/vendor.bundle.base.css">
+<link rel="stylesheet" href="/assets/vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/assets/vendors/base/vendor.bundle.base.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
-<link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+<link rel="stylesheet" href="/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 <!-- endinject -->
 
 <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/ace/1.43.1/ace.js"></script>

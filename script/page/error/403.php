@@ -1,5 +1,5 @@
 <?php
-view::header("权限错误");
+view::header("权限错误",2);
 ?>
 <div class="row">
     <div class="col-md-12 stretch-card">

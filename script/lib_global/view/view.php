@@ -3,7 +3,7 @@ $viewimport = [];
 class view
 {
     // 定义一个静态函数，用于生成HTML的头部
-    public static function header($title = "主页", $oh = "", $nav = 1)
+    public static function header($title = "主页", $nav = 0, $oh = "")
     {
         $title = $title . $GLOBALS['titleSuffix'];
         // 输出HTML的头部
@@ -15,10 +15,35 @@ class view
         echo "\n<title>", $title . "</title>\n";
         // 输出oh变量
         echo $oh;
-
-        echo "</head>\n";
+        switch ($nav) {
+            case 1:
+                $navout = "sidebar-icon-only";
+                break;
+            case 2:
+                $navout = "";
+                echo "
+                    <style>
+                    .sidebar-offcanvas{
+                        display:none;
+                    }
+                    .main-panel{
+                        margin:auto;
+                    }
+                    </style>
+                ";
+                break;
+            case 3:
+                echo "</head>\n<body class='", $navout, "'>";
+                echo '<div class="main-panel full-scroll"><div class="content-wrapper">';
+                return;
+                break;
+            default:
+                $navout = "";
+                break;
+        }
+        echo "</head>\n<body class='", $navout, "'>";
         // 引入导航文件
-        if ($nav) include includeViewer("nav");
+        include includeViewer("nav");
         echo '<div class="main-panel full-scroll"><div class="content-wrapper">';
     }
     // 定义一个静态函数，用于生成HTML的尾部
