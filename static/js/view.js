@@ -71,3 +71,8 @@ $.extend(true, $.fn.dataTable.defaults, {
         }
     }
 })
+function useJQDatatable(id, info = true, paging = true, search = true) {
+    $('#' + id).DataTable({
+        searching: search, paging: package, info: info
+    });
+}
