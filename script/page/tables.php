@@ -10,7 +10,7 @@ view::header("表格们");
                     Add class <code>.table</code>
                 </p>
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table" id="a">
                         <thead>
                             <tr>
                                 <th>Profile</th>
