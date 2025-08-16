@@ -19,9 +19,18 @@
 <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/marked/16.0.0/lib/marked.umd.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css" integrity="sha512-BrOPA520KmDMqieeM7XFe6a3u3Sb3F1JBaQnrIAmWg3EYrciJ+Qqe6ZcKCdfPv26rGcgTrJnZ/IdQEct8h3Zhw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<script src="/assets/vendors/chart.js/Chart.min.js"></script>
+
+<script src="/assets/vendors/base/vendor.bundle.base.js"></script>
+<script src="/assets/vendors/datatables.net/jquery.dataTables.js"></script>
+<script src="/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+<script src="/assets/js/off-canvas.js"></script>
+<script src="/assets/js/hoverable-collapse.js"></script>
+<script src="/assets/js/template.js"></script>
+<script src="/assets/js/jquery.cookie.js" type="text/javascript"></script>
+
 <link rel="stylesheet" href="/static/css/global.css">
 <link rel="stylesheet" href="/static/css/cctb.css">
 <link rel="stylesheet" href="/static/css/bm.css">
 <link rel="stylesheet" href="/static/css/theme.css">
 <script src="/static/js/view.js"></script>
-

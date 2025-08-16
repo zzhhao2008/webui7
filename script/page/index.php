@@ -1,5 +1,5 @@
 <?php
-view::header('首页',1);
+view::header('首页', 1);
 ?>
 <div class="row">
     <div class="col-md-12 grid-margin">
@@ -234,9 +234,156 @@ view::header('首页',1);
                             <tr>
                                 <td>个人</td>
                                 <td>-100</td>
-                                <td>--</td>
+                                <td>桌面上有书</td>
                                 <td>无</td>
                                 <td>Today</td>
+                            </tr>
+                            <tr>
+                                <td>班级</td>
+                                <td>-20</td>
+                                <td>垃圾桶里有垃圾</td>
+                                <td>无备注</td>
+                                <td>昨天</td>
+                            </tr>
+                            <tr>
+                                <td>学校</td>
+                                <td>-50</td>
+                                <td>实验室设备故障</td>
+                                <td>无</td>
+                                <td>前天</td>
+                            </tr>
+                            <tr>
+                                <td>家庭</td>
+                                <td>-15</td>
+                                <td>空调不制冷</td>
+                                <td>需紧急处理</td>
+                                <td>2天前</td>
+                            </tr>
+                            <tr>
+                                <td>公司</td>
+                                <td>-200</td>
+                                <td>会议室投影仪损坏</td>
+                                <td>无</td>
+                                <td>今天</td>
+                            </tr>
+                            <tr>
+                                <td>社团</td>
+                                <td>-30</td>
+                                <td>活动物资短缺</td>
+                                <td>无备注</td>
+                                <td>3天前</td>
+                            </tr>
+                            <tr>
+                                <td>宿舍</td>
+                                <td>-75</td>
+                                <td>卫生间水管漏水</td>
+                                <td>已报修</td>
+                                <td>上周</td>
+                            </tr>
+                            <tr>
+                                <td>图书馆</td>
+                                <td>-10</td>
+                                <td>自习室插座故障</td>
+                                <td>无</td>
+                                <td>4天前</td>
+                            </tr>
+                            <tr>
+                                <td>食堂</td>
+                                <td>-25</td>
+                                <td>餐具消毒不彻底</td>
+                                <td>无备注</td>
+                                <td>5天前</td>
+                            </tr>
+                            <tr>
+                                <td>个人</td>
+                                <td>-150</td>
+                                <td>电脑屏幕碎裂</td>
+                                <td>无</td>
+                                <td>今天</td>
+                            </tr>
+                            <tr>
+                                <td>班级</td>
+                                <td>-40</td>
+                                <td>教室窗帘损坏</td>
+                                <td>处理中</td>
+                                <td>昨天</td>
+                            </tr>
+                            <tr>
+                                <td>实验室</td>
+                                <td>-80</td>
+                                <td>实验器材缺失</td>
+                                <td>无</td>
+                                <td>前天</td>
+                            </tr>
+                            <tr>
+                                <td>家庭</td>
+                                <td>-60</td>
+                                <td>厨房油烟机故障</td>
+                                <td>无备注</td>
+                                <td>2天前</td>
+                            </tr>
+                            <tr>
+                                <td>公司</td>
+                                <td>-300</td>
+                                <td>打印机频繁卡纸</td>
+                                <td>无</td>
+                                <td>3天前</td>
+                            </tr>
+                            <tr>
+                                <td>社团</td>
+                                <td>-90</td>
+                                <td>活动场地被占用</td>
+                                <td>需协调</td>
+                                <td>上周</td>
+                            </tr>
+                            <tr>
+                                <td>宿舍</td>
+                                <td>-45</td>
+                                <td>阳台玻璃破裂</td>
+                                <td>无</td>
+                                <td>4天前</td>
+                            </tr>
+                            <tr>
+                                <td>图书馆</td>
+                                <td>-200</td>
+                                <td>图书归还系统故障</td>
+                                <td>无备注</td>
+                                <td>5天前</td>
+                            </tr>
+                            <tr>
+                                <td>食堂</td>
+                                <td>-120</td>
+                                <td>餐桌椅损坏</td>
+                                <td>无</td>
+                                <td>上个月</td>
+                            </tr>
+                            <tr>
+                                <td>个人</td>
+                                <td>-180</td>
+                                <td>手机充电器丢失</td>
+                                <td>无备注</td>
+                                <td>今天</td>
+                            </tr>
+                            <tr>
+                                <td>班级</td>
+                                <td>-55</td>
+                                <td>教室灯光昏暗</td>
+                                <td>已反馈</td>
+                                <td>昨天</td>
+                            </tr>
+                            <tr>
+                                <td>学校</td>
+                                <td>-130</td>
+                                <td>操场设施老化</td>
+                                <td>无</td>
+                                <td>前天</td>
+                            </tr>
+                            <tr>
+                                <td>家庭</td>
+                                <td>-70</td>
+                                <td>洗衣机无法启动</td>
+                                <td>无备注</td>
+                                <td>2天前</td>
                             </tr>
                         </tbody>
                     </table>
@@ -249,6 +396,3 @@ view::header('首页',1);
 view::foot();
 ?>
 <script src="assets/js/dashboard.js"></script>
-<script src="assets/js/data-table.js"></script>
-<script src="assets/js/jquery.dataTables.js"></script>
-<script src="assets/js/dataTables.bootstrap4.js"></script>

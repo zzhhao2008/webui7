@@ -33,9 +33,41 @@ function addMessage(title, text, icon = "bell", url = "") {
 			</div>
 		</a>\n`;
 }
-function activeMB(){
-    document.getElementById("messageDropdown").innerHTML=`<i class="mdi mdi-bell mx-0"></i><span class="count"></span>`;
+function activeMB() {
+    document.getElementById("messageDropdown").innerHTML = `<i class="mdi mdi-bell mx-0"></i><span class="count"></span>`;
 }
-function deactiveMB(){
-    document.getElementById("messageDropdown").innerHTML=`<i class="mdi mdi-bell mx-0"></i>`;
+function deactiveMB() {
+    document.getElementById("messageDropdown").innerHTML = `<i class="mdi mdi-bell mx-0"></i>`;
 }
+$.extend(true, $.fn.dataTable.defaults, {
+    "aLengthMenu": [
+        [5, 10, 15, -1],
+        [5, 10, 15, "全部"]
+    ],
+    "iDisplayLength": 10,
+    "language": {
+        search: "",
+        "sProcessing": "处理中...",
+        "sLengthMenu": "显示 _MENU_ 项结果",
+        "sZeroRecords": "没有匹配结果",
+        "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+        "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+        "sInfoPostFix": "",
+        "sSearch": "搜索:",
+        "sUrl": "",
+        "sEmptyTable": "表中数据为空",
+        "sLoadingRecords": "载入中...",
+        "sInfoThousands": ",",
+        "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
+        },
+        "oAria": {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+        }
+    }
+})

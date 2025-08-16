@@ -22574,21 +22574,11 @@ dl li {
   margin-bottom: 0;
   margin-top: 0;
   list-style: none;
-  padding: 0.25rem 0 0.6rem 3.55rem;
+  padding: 0.25rem 0 0.6rem 2.77rem;
 }
 
 .sidebar .nav.sub-menu .nav-item {
   padding: 0;
-}
-
-.sidebar .nav.sub-menu .nav-item::before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #000;
-  margin-top: 15px;
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link {
