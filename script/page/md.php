@@ -1,12 +1,20 @@
 <?php
 $doclist = [
     [
-        "title" => "API列表",
+        "title" => "渲染管线及小组件",
+        "uri" => "documents/viewapi.md"
+    ],
+    [
+        "title" => "API列表及系统级组件",
         "uri" => "documents/apilist.md"
     ],
     [
-        "title" => "组件列表-文件树",
+        "title" => "组件列表",
         "uri" => "documents/componentlist.md"
+    ],
+    [
+        "title" => "按钮组件",
+        "uri" => "documents/buttons.md"
     ],
 ];
 $docid = $_GET['id'] ?? 0;

@@ -8,6 +8,7 @@ include includeGLib("main");
 include includeGLib("basic/time");
 include includeGLib("basic/router");
 include includeGLib("view/view");
+include includeGLib("view/buttons");
 
 
 $GLOBALS['titleSuffix'] = "-ZSV WebUI7.0";

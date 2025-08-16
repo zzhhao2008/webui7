@@ -25,5 +25,8 @@ Majestic Admin
 4. 访问你的Web服务器，并开始使用ZSV7。
 
 ## 文档
-- [API列表](./documents/apilist.md)
+- [渲染管线及小组件](./documents/viewapi.md)
+    - [视图渲染](./documents/viewapi.md)
+    - [按钮组件](./documents/buttons.md)
+- [API列表及系统级组件](./documents/apilist.md)
 - [组件列表](./documents/componentlist.md)

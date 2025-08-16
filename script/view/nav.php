@@ -94,7 +94,7 @@
 				<div class="collapse" id="ui-basic">
 					<ul class="nav flex-column sub-menu">
 						<li class="nav-item"> <a class="nav-link" href="/buttons">按钮</a></li>
-						<li class="nav-item"> <a class="nav-link" href="/typography">工具</a></li>
+						<li class="nav-item"> <a class="nav-link" href="/typography">字体排印学</a></li>
 					</ul>
 				</div>
 			</li>
@@ -144,8 +144,10 @@
 				</a>
 				<div class="collapse" id="doc">
 					<ul class="nav flex-column sub-menu">
-						<li class="nav-item"> <a class="nav-link" href="/doc?id=0"> API列表 </a></li>
-						<li class="nav-item"> <a class="nav-link" href="/doc?id=1"> 组件列表/文件树 </a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc">渲染管线</a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=3">按钮组件</a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=1"> API列表及系统组件 </a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=2"> 组件列表 </a></li>
 					</ul>
 				</div>
 			</li>
