@@ -28,5 +28,6 @@ Majestic Admin
 - [渲染管线及小组件](./documents/viewapi.md)
     - [视图渲染](./documents/viewapi.md)
     - [按钮组件](./documents/buttons.md)
+    - [表格组件](./documents/tables.md)
 - [API列表及系统级组件](./documents/apilist.md)
 - [组件列表](./documents/componentlist.md)
