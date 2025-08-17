@@ -10,48 +10,21 @@ view::header("表格们");
                     Add class <code>.table</code>
                 </p>
                 <div class="table-responsive">
-                    <table class="table" id="a">
-                        <thead>
-                            <tr>
-                                <th>Profile</th>
-                                <th>VatNo.</th>
-                                <th>Created</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>53275531</td>
-                                <td>12 May 2017</td>
-                                <td><label class="badge badge-danger">Pending</label></td>
-                            </tr>
-                            <tr>
-                                <td>Messsy</td>
-                                <td>53275532</td>
-                                <td>15 May 2017</td>
-                                <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                            <tr>
-                                <td>John</td>
-                                <td>53275533</td>
-                                <td>14 May 2017</td>
-                                <td><label class="badge badge-info">Fixed</label></td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>53275534</td>
-                                <td>16 May 2017</td>
-                                <td><label class="badge badge-success">Completed</label></td>
-                            </tr>
-                            <tr>
-                                <td>Dave</td>
-                                <td>53275535</td>
-                                <td>20 May 2017</td>
-                                <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                    tables::common(
+                        [
+                            ["Name", "Position", "Office", "Age", "Start date", "Salary"],
+                            ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"],
+                            ["Garrett Winters", "Accountant", "Tokyo", "63", "2011/07/25", "70,750"],
+                            ["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"],
+                        ],
+                        ["striped","bordered","hover"],
+                        [0=>"table-dark",2=>'table-info',],
+                        [
+                            1=>[2=>"text-danger"]
+                        ]
+                    );
+                    ?>
                 </div>
             </div>
         </div>
