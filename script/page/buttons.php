@@ -7,29 +7,8 @@ view::header('按钮们');
             <div class="card-body">
                 <p class="card-title">按钮们</p>
                 真的小径:<code>/script/pages/buttons.php</code>
+                <p>查看说明文档：<a href="/doc?id=3">/document/buttons.md</a></p>
                 <p>文档中部分原始HTML没有被修改，可以亲自尝试！</p>
-                <pre>
-使用不动的PHP函数以创建单个按钮
-/**
-     * 单个按钮
-     * @param string $text 按钮文字
-     * @param string $function 按钮点击事件
-     * @param string $color 按钮颜色
-     * @param string $border 按钮边框颜色
-     * @param array $para 按钮参数
-     * @param string $type 按钮类型
-     * @param string $o 其他属性
-     * @return string 按钮HTML代码
-*/
-buttons::single($text, $function = "", $color = "primary",$border="",$para=[],$type="button", $o = "")
-/**
-     * 按钮组
-     * @param array $buttons 按钮组
-     * @param int $v 垂直对齐方式-0/"r" for 水平 1/v" for 垂直
-     * @return string
-*/
-buttons::group($buttons,$v=0)
-                </pre>
             </div>
         </div>
     </div>

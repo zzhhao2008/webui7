@@ -9,6 +9,7 @@ class tables
         });";
         global $viewimport;
         $viewimport['js'] .= $newjs;
+        return $id;
     }
     public static function common($data, $cfg = [], $rowcfg = [], $colcfg = [])
     {
@@ -39,5 +40,10 @@ class tables
         }
         echo "</tbody></table>";
         return $tableid;
+    }
+
+    public static function super($data,$cfg=[],$rowcfg=[],$colcfg=[],$info = true, $paging = true, $search = true){
+        $tableid = self::common($data,$cfg,$rowcfg,$colcfg);
+        return self::JQDataTable($tableid,$info,$paging,$search);
     }
 }

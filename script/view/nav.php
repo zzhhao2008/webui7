@@ -146,6 +146,8 @@
 					<ul class="nav flex-column sub-menu">
 						<li class="nav-item"> <a class="nav-link" href="/doc">渲染管线</a></li>
 						<li class="nav-item"> <a class="nav-link" href="/doc?id=3">按钮组件</a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=4">表格组件</a></li>
+						<li class="nav-item"> <a class="nav-link" href="/doc?id=5">图表组件</a></li>
 						<li class="nav-item"> <a class="nav-link" href="/doc?id=1"> API列表及系统组件 </a></li>
 						<li class="nav-item"> <a class="nav-link" href="/doc?id=2"> 组件列表 </a></li>
 					</ul>

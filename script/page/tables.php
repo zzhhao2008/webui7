@@ -2,27 +2,36 @@
 view::header("表格们");
 ?>
 <div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">表格们</p>
+                真的小径:<code>/script/pages/tables.php</code>
+                <p>查看说明文档：<a href="/doc?id=4">/document/tables.md</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div class="col-lg-6 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Basic Table</h4>
+                <h4 class="card-title">典型列表</h4>
                 <p class="card-description">
-                    Add class <code>.table</code>
+                    添加类 <code>.table</code>
                 </p>
                 <div class="table-responsive">
                     <?php
                     tables::common(
                         [
-                            ["Name", "Position", "Office", "Age", "Start date", "Salary"],
-                            ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"],
-                            ["Garrett Winters", "Accountant", "Tokyo", "63", "2011/07/25", "70,750"],
-                            ["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"],
+                            ["姓名", "职位", "办公室", "年龄", "入职日期", "薪资"],
+                            ["张三", "系统架构师", "爱丁堡", "61", "2011/04/25", "320,800元"],
+                            ["李四", "会计师", "东京", "63", "2011/07/25", "70,750元"],
+                            ["王五", "初级技术作者", "旧金山", "66", "2009/01/12", "86,000元"],
                         ],
-                        ["striped","bordered","hover"],
-                        [0=>"table-dark",2=>'table-info',],
-                        [
-                            1=>[2=>"text-danger"]
-                        ]
+                        [],
+                        [],
+                        []
                     );
                     ?>
                 </div>
@@ -32,53 +41,32 @@ view::header("表格们");
     <div class="col-lg-6 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Hoverable Table</h4>
+                <h4 class="card-title">悬停表格</h4>
                 <p class="card-description">
-                    Add class <code>.table-hover</code>
+                    添加类 <code>.table-hover</code>
                 </p>
                 <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>Product</th>
-                                <th>Sale</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>Photoshop</td>
-                                <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
-                                <td><label class="badge badge-danger">Pending</label></td>
-                            </tr>
-                            <tr>
-                                <td>Messsy</td>
-                                <td>Flash</td>
-                                <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
-                                <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                            <tr>
-                                <td>John</td>
-                                <td>Premier</td>
-                                <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
-                                <td><label class="badge badge-info">Fixed</label></td>
-                            </tr>
-                            <tr>
-                                <td>Peter</td>
-                                <td>After effects</td>
-                                <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
-                                <td><label class="badge badge-success">Completed</label></td>
-                            </tr>
-                            <tr>
-                                <td>Dave</td>
-                                <td>53275535</td>
-                                <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
-                                <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                    tables::common(
+                        [
+                            ["用户", "产品", "销量", "状态"],
+                            ["张三", "Photoshop", '28.76% <i class="mdi mdi-arrow-down"></i>', '<label class="badge badge-danger">待处理</label>'],
+                            ["李四", "Flash", '21.06% <i class="mdi mdi-arrow-down"></i>', '<label class="badge badge-warning">进行中</label>'],
+                            ["王五", "Premier", '35.00% <i class="mdi mdi-arrow-down"></i>', '<label class="badge badge-info">已修复</label>'],
+                            ["赵六", "After effects", '82.00% <i class="mdi mdi-arrow-up"></i>', '<label class="badge badge-success">已完成</label>'],
+                            ["孙七", "53275535", '98.05% <i class="mdi mdi-arrow-up"></i>', '<label class="badge badge-warning">进行中</label>'],
+                        ],
+                        ['hover'],
+                        [],
+                        [
+                            2 => ['', '', 'text-danger', ''],
+                            3 => ['', '', 'text-danger', ''],
+                            4 => ['', '', 'text-danger', ''],
+                            5 => ['', '', 'text-success', ''],
+                            6 => ['', '', 'text-success', '']
+                        ]
+                    );
+                    ?>
                 </div>
             </div>
         </div>
@@ -86,167 +74,28 @@ view::header("表格们");
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Striped Table</h4>
+                <h4 class="card-title">条纹表格</h4>
                 <p class="card-description">
-                    Add class <code>.table-striped</code>
+                    添加类 <code>.table-striped</code>
                 </p>
                 <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>
-                                    User
-                                </th>
-                                <th>
-                                    First name
-                                </th>
-                                <th>
-                                    Progress
-                                </th>
-                                <th>
-                                    Amount
-                                </th>
-                                <th>
-                                    Deadline
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face1.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Herman Beck
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face2.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Messsy Adam
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $245.30
-                                </td>
-                                <td>
-                                    July 1, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face3.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    John Richards
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $138.00
-                                </td>
-                                <td>
-                                    Apr 12, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face4.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Peter Meggik
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face5.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Edward
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 160.25
-                                </td>
-                                <td>
-                                    May 03, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face6.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    John Doe
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 123.21
-                                </td>
-                                <td>
-                                    April 05, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-1">
-                                    <img src="../../images/faces/face7.jpg" alt="image" />
-                                </td>
-                                <td>
-                                    Henry Tom
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 150.00
-                                </td>
-                                <td>
-                                    June 16, 2015
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                    $data = [
+                        ["", "姓名", "进度", "金额", "截止日期"],
+                        ['<img src="../../images/faces/face1.jpg" alt="image" />', "张三", '<div class="progress"><div class="progress-bar bg-success" style="width:25%"></div></div>', "77.99元", "2015年5月15日"],
+                        ['<img src="../../images/faces/face2.jpg" alt="image" />', "李四", '<div class="progress"><div class="progress-bar bg-danger" style="width:75%"></div></div>', "245.30元", "2015年7月1日"],
+                        ['<img src="../../images/faces/face3.jpg" alt="image" />', "王五", '<div class="progress"><div class="progress-bar bg-warning" style="width:90%"></div></div>', "138.00元", "2015年4月12日"],
+                        ['<img src="../../images/faces/face4.jpg" alt="image" />', "赵六", '<div class="progress"><div class="progress-bar bg-primary" style="width:50%"></div></div>', "77.99元", "2015年5月15日"],
+                        ['<img src="../../images/faces/face5.jpg" alt="image" />', "孙七", '<div class="progress"><div class="progress-bar bg-danger" style="width:35%"></div></div>', "160.25元", "2015年5月3日"],
+                        ['<img src="../../images/faces/face6.jpg" alt="image" />', "周八", '<div class="progress"><div class="progress-bar bg-info" style="width:65%"></div></div>', "123.21元", "2015年4月5日"],
+                        ['<img src="../../images/faces/face7.jpg" alt="image" />', "吴九", '<div class="progress"><div class="progress-bar bg-warning" style="width:20%"></div></div>', "150.00元", "2015年6月16日"],
+                    ];
+                    $colcfg = [];
+                    for ($i = 2; $i <= 8; $i++) {
+                        $colcfg[$i] = ['py-1', '', '', '', ''];
+                    }
+                    tables::common($data, ['striped'], [], $colcfg);
+                    ?>
                 </div>
             </div>
         </div>
@@ -254,167 +103,26 @@ view::header("表格们");
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Bordered table</h4>
+                <h4 class="card-title">带边框表格</h4>
                 <p class="card-description">
-                    Add class <code>.table-bordered</code>
+                    添加类 <code>.table-bordered</code>
                 </p>
                 <div class="table-responsive pt-3">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>
-                                    #
-                                </th>
-                                <th>
-                                    First name
-                                </th>
-                                <th>
-                                    Progress
-                                </th>
-                                <th>
-                                    Amount
-                                </th>
-                                <th>
-                                    Deadline
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    1
-                                </td>
-                                <td>
-                                    Herman Beck
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    Messsy Adam
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $245.30
-                                </td>
-                                <td>
-                                    July 1, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    3
-                                </td>
-                                <td>
-                                    John Richards
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $138.00
-                                </td>
-                                <td>
-                                    Apr 12, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4
-                                </td>
-                                <td>
-                                    Peter Meggik
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    5
-                                </td>
-                                <td>
-                                    Edward
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 160.25
-                                </td>
-                                <td>
-                                    May 03, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    6
-                                </td>
-                                <td>
-                                    John Doe
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 123.21
-                                </td>
-                                <td>
-                                    April 05, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    7
-                                </td>
-                                <td>
-                                    Henry Tom
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $ 150.00
-                                </td>
-                                <td>
-                                    June 16, 2015
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                    tables::common(
+                        [
+                            ["#", "姓名", "进度", "金额", "截止日期"],
+                            ["1", "张三", '<div class="progress"><div class="progress-bar bg-success" style="width:25%"></div></div>', "77.99元", "2015年5月15日"],
+                            ["2", "李四", '<div class="progress"><div class="progress-bar bg-danger" style="width:75%"></div></div>', "245.30元", "2015年7月1日"],
+                            ["3", "王五", '<div class="progress"><div class="progress-bar bg-warning" style="width:90%"></div></div>', "138.00元", "2015年4月12日"],
+                            ["4", "赵六", '<div class="progress"><div class="progress-bar bg-primary" style="width:50%"></div></div>', "77.99元", "2015年5月15日"],
+                            ["5", "孙七", '<div class="progress"><div class="progress-bar bg-danger" style="width:35%"></div></div>', "160.25元", "2015年5月3日"],
+                            ["6", "周八", '<div class="progress"><div class="progress-bar bg-info" style="width:65%"></div></div>', "123.21元", "2015年4月5日"],
+                            ["7", "吴九", '<div class="progress"><div class="progress-bar bg-warning" style="width:20%"></div></div>', "150.00元", "2015年6月16日"],
+                        ],
+                        ['bordered']
+                    );
+                    ?>
                 </div>
             </div>
         </div>
@@ -422,129 +130,26 @@ view::header("表格们");
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Inverse table</h4>
+                <h4 class="card-title">反色表格</h4>
                 <p class="card-description">
-                    Add class <code>.table-dark</code>
+                    添加类 <code>.table-dark</code>
                 </p>
                 <div class="table-responsive pt-3">
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th>
-                                    #
-                                </th>
-                                <th>
-                                    First name
-                                </th>
-                                <th>
-                                    Amount
-                                </th>
-                                <th>
-                                    Deadline
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    1
-                                </td>
-                                <td>
-                                    Herman Beck
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    Messsy Adam
-                                </td>
-                                <td>
-                                    $245.30
-                                </td>
-                                <td>
-                                    July 1, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    3
-                                </td>
-                                <td>
-                                    John Richards
-                                </td>
-                                <td>
-                                    $138.00
-                                </td>
-                                <td>
-                                    Apr 12, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    4
-                                </td>
-                                <td>
-                                    Peter Meggik
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    5
-                                </td>
-                                <td>
-                                    Edward
-                                </td>
-                                <td>
-                                    $ 160.25
-                                </td>
-                                <td>
-                                    May 03, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    6
-                                </td>
-                                <td>
-                                    John Doe
-                                </td>
-                                <td>
-                                    $ 123.21
-                                </td>
-                                <td>
-                                    April 05, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    7
-                                </td>
-                                <td>
-                                    Henry Tom
-                                </td>
-                                <td>
-                                    $ 150.00
-                                </td>
-                                <td>
-                                    June 16, 2015
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                    tables::common(
+                        [
+                            ["#", "姓名", "金额", "截止日期"],
+                            ["1", "张三", "77.99元", "2015年5月15日"],
+                            ["2", "李四", "245.30元", "2015年7月1日"],
+                            ["3", "王五", "138.00元", "2015年4月12日"],
+                            ["4", "赵六", "77.99元", "2015年5月15日"],
+                            ["5", "孙七", "160.25元", "2015年5月3日"],
+                            ["6", "周八", "123.21元", "2015年4月5日"],
+                            ["7", "吴九", "150.00元", "2015年6月16日"],
+                        ],
+                        ['dark']
+                    );
+                    ?>
                 </div>
             </div>
         </div>
@@ -552,119 +157,31 @@ view::header("表格们");
     <div class="col-lg-12 stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Table with contextual classes</h4>
+                <h4 class="card-title">上下文类表格</h4>
                 <p class="card-description">
-                    Add class <code>.table-{color}</code>
+                    添加类 <code>.table-{颜色}</code>
                 </p>
                 <div class="table-responsive pt-3">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>
-                                    #
-                                </th>
-                                <th>
-                                    First name
-                                </th>
-                                <th>
-                                    Product
-                                </th>
-                                <th>
-                                    Amount
-                                </th>
-                                <th>
-                                    Deadline
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table-info">
-                                <td>
-                                    1
-                                </td>
-                                <td>
-                                    Herman Beck
-                                </td>
-                                <td>
-                                    Photoshop
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr class="table-warning">
-                                <td>
-                                    2
-                                </td>
-                                <td>
-                                    Messsy Adam
-                                </td>
-                                <td>
-                                    Flash
-                                </td>
-                                <td>
-                                    $245.30
-                                </td>
-                                <td>
-                                    July 1, 2015
-                                </td>
-                            </tr>
-                            <tr class="table-danger">
-                                <td>
-                                    3
-                                </td>
-                                <td>
-                                    John Richards
-                                </td>
-                                <td>
-                                    Premeire
-                                </td>
-                                <td>
-                                    $138.00
-                                </td>
-                                <td>
-                                    Apr 12, 2015
-                                </td>
-                            </tr>
-                            <tr class="table-success">
-                                <td>
-                                    4
-                                </td>
-                                <td>
-                                    Peter Meggik
-                                </td>
-                                <td>
-                                    After effects
-                                </td>
-                                <td>
-                                    $ 77.99
-                                </td>
-                                <td>
-                                    May 15, 2015
-                                </td>
-                            </tr>
-                            <tr class="table-primary">
-                                <td>
-                                    5
-                                </td>
-                                <td>
-                                    Edward
-                                </td>
-                                <td>
-                                    Illustrator
-                                </td>
-                                <td>
-                                    $ 160.25
-                                </td>
-                                <td>
-                                    May 03, 2015
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                    tables::common(
+                        [
+                            ["#", "姓名", "产品", "金额", "截止日期"],
+                            ["1", "张三", "Photoshop", "77.99元", "2015年5月15日"],
+                            ["2", "李四", "Flash", "245.30元", "2015年7月1日"],
+                            ["3", "王五", "Premiere", "138.00元", "2015年4月12日"],
+                            ["4", "赵六", "After effects", "77.99元", "2015年5月15日"],
+                            ["5", "孙七", "Illustrator", "160.25元", "2015年5月3日"],
+                        ],
+                        ['bordered'],
+                        [
+                            2 => 'table-info',
+                            3 => 'table-warning',
+                            4 => 'table-danger',
+                            5 => 'table-success',
+                            6 => 'table-primary'
+                        ]
+                    );
+                    ?>
                 </div>
             </div>
         </div>

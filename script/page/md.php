@@ -16,6 +16,14 @@ $doclist = [
         "title" => "按钮组件",
         "uri" => "documents/buttons.md"
     ],
+    [
+        "title" => "表格",
+        "uri" => "documents/tables.md"
+    ],
+    [
+        "title" => "Chart.js",
+        "uri" => "documents/chartjs.md"
+    ],
 ];
 $docid = $_GET['id'] ?? 0;
 if ($docid < 0 || $docid >= count($doclist)) {
