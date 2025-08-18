@@ -3,7 +3,7 @@
 ## 路由（Router）
 ### /script/lib_global/basic/router.php
 模块功能：提供路由功能，用于处理URL请求并调用相应的控制器方法。
-路由表位置：/script/router.php
+路由表位置：/script/route.php
 使用静态类 `Router::<functionname>` 实现基于权限控制的路由映射系统，支持不同用户角色的访问控制和请求路径解析。
 
 #### 函数列表
